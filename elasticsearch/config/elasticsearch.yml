@@ -3,10 +3,19 @@
 ## https://github.com/elastic/elasticsearch/blob/main/distribution/docker/src/docker/config/elasticsearch.yml
 #
 cluster.name: docker-cluster
+# node.name:    ${ELASTIC_NODE_NAME}
 network.host: 0.0.0.0
+
+# ## Cluster Settings
+# discovery.seed_hosts: ${ELASTIC_DISCOVERY_SEEDS}
+# cluster.initial_master_nodes: ${ELASTIC_INIT_MASTER_NODE}
 
 ## X-Pack settings
 ## see https://www.elastic.co/guide/en/elasticsearch/reference/current/security-settings.html
-#
-xpack.license.self_generated.type: trial
+# License
+xpack.license.self_generated.type: basic
+# Security
 xpack.security.enabled: true
+
+# # Monitoring
+# xpack.monitoring.collection.enabled: true
